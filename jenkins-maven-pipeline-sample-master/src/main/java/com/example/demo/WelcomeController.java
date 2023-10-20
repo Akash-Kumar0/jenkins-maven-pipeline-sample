@@ -18,6 +18,6 @@ public class WelcomeController {
 	@GetMapping("/")
     public ModelAndView showHomePage() {
 		//System.out.println("show Home page");
-		 return new ModelAndView("home");
+		 return new ModelAndView("Welcome");
     }
 }
