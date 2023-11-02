@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout'){
+            steps{
+                echo "Checkout"
+            }
+        }
+        stage('Build') {
+            steps {
+                 git url:'https://github.com/Akash-Kumar0/jenkins-maven-pipeline-sample.git', branch:'main'
+            }
+        }
+        stage('Test'){
+            steps{
+                echo "Test"
+            }
+        }
+        stage('deploy'){
+            steps{
+               echo "Deploy"
+            }
+        }
+    }
+}
